@@ -1,0 +1,78 @@
+#include <iostream>
+#include <string>
+#include <algorithm> // For Transform
+
+int main() {
+  // Quiz Time
+  int answer1;
+  int answer2;
+  std::string answer3;
+  int score = 0;
+
+  std::cout << "        ________________\n";
+  std::cout << "        |              |\n";
+  std::cout << "        |    Welcome   |\n";
+  std::cout << "        |  Trivia Game |\n";
+  std::cout << "        |              |\n";
+  std::cout << "        |______________|\n\n\n";
+
+  //Question 1
+
+  std::cout << "Q1) What is the name of the world's longest river? 💧\n\n\n";
+  std::cout << "1) Missouri River\n";
+  std::cout << "2) Nile\n";
+  std::cout << "3) Amazon River\n";
+  std::cout << "4) Yangtze River\n";
+
+  std::cin >> answer1;
+
+  if (answer1 == 2){
+    std::cout << "Yah Your are Right\n\n\n";
+    score++;
+  } 
+  else{
+    std::cout << "I'm Sorry....it's not correct!\n\n\n";
+  }
+
+  //Question 2
+
+  std::cout << "Q2) How many bones are in the human body? 🦴\n\n";
+  std::cout << "1) 92\n";
+  std::cout << "2) 150\n";
+  std::cout << "3) 206\n";
+  std::cout << "4) 10 \n";
+
+  std::cin >> answer2;
+
+  if(answer2 == 3){
+    std::cout << "Yah Your are Right\n\n\n";
+    score++;
+  }
+  else{
+    std::cout << "I'm Sorry....it's not correct!\n\n\n";
+  }
+
+  // Question 3
+
+  std::cout << "Q3) What food never spoils? 😷\n\n";
+  std::cout << "Type Your Answer...\n";
+
+  // make input lowercase so "honey" == "Honey"
+
+  transform(answer3.begin(), answer3.end(), answer3.begin(), ::tolower);
+
+  std::cin >> answer3;
+
+  if(answer3 == "honey"){
+    std::cout << "Yah Your are Right\n\n\n";
+    score++;
+  }
+  else{
+    std::cout << "I'm Sorry....it's not correct!\n\n\n";
+  }
+
+  std::cout << "You got " << score << " out of 3 Correct!";
+
+
+  
+}
